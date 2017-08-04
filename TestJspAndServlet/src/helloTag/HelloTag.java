@@ -2,7 +2,11 @@ package helloTag;
 
 import java.io.IOException;
 import java.io.StringWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.jsp.JspException;
 import javax.servlet.jsp.JspWriter;
 import javax.servlet.jsp.tagext.SimpleTagSupport;
@@ -24,6 +28,6 @@ public class HelloTag extends SimpleTagSupport {
 		options += "<option>2</option>";
 		options += "<option>3</option>";
 		String select = "<select>"+options+"</select>";
-		out.println(select);		
+		out.println(select);			
 	}
 }
